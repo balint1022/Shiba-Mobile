@@ -1,0 +1,28 @@
+.container {
+    max-width: 960px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.prodpicture {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.wider-input {
+    width: 200px !important;
+}
+
+

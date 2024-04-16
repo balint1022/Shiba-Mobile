@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@splinetool/runtime": "^1.0.32",
+    "opentype": "^0.1.2"
+  }
+}

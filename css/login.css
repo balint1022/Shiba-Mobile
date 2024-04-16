@@ -1,0 +1,118 @@
+/* Általános elrendezés és formázás a fő tartalomhoz */
+*,
+*:before,
+*:after,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* Űrlap stílusok */
+form {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(231, 228, 229, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(231, 228, 229, 0.2);
+    padding: 50px 35px;
+    margin: 0 auto;
+    float:right
+}
+
+
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Összes űrlap elem általános stílusa */
+form * {
+    font-family: monospace;
+    color: black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+/* Címkék stílusa */
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Bemeneti mezők stílusa */
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: black;
+}
+
+/* Gomb stílusa */
+button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Elfogadási jelölőnégyzet stílusa */
+input.terms {
+    width: 15px;
+    height: 15px;
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+/* Elfogadási jelölőnégyzet és szöveg egy sorba rendezése */
+.accept {
+    display: flex;
+}
+
+/* Responszív elrendezés */
+@media (max-width: 768px) {
+    form {
+        padding: 30px 20px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+
+    form h3 {
+        font-size: 24px;
+    }
+}
+
+
+
+
+

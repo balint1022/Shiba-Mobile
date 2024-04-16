@@ -1,0 +1,235 @@
+a {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main_part {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Szélességre osztott tartalom formázása */
+.col-lg-6 {
+  flex: 1;
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.hero-text h1 {
+  font-size: 52.8px;
+  margin-bottom: 12px;
+  color: #8b4513;
+}
+
+.hero-text p {
+  font-size: 22.4px;
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: none;
+  background-color: #8b4513;
+  color: white;
+  font-weight: 800;
+  font-size: 13.6px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #6F370F;
+}
+
+.btn-danger {
+  padding: 10px 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 205px;
+}
+
+.btn-primary {
+  padding: 12px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.btn-primary:hover {
+  background-color: grey;
+}
+
+/* Navigáció */
+.navigation-header {
+  background-color: white;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container>a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation-items>a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: .4s ease-in-out;
+}
+
+.navigation-items>a:hover {
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+}
+
+/* Kisebb kijelzők esetén */
+@media screen and (max-width:768px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger #closeHam {
+    display: none;
+  }
+
+  .navigation-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 58px;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 58px); /* A navigációs menü magasságát úgy állítjuk be, hogy kiszámoljuk a nézet teljes magasságából a fejléc magasságát, és ezt a mennyiséget vonjuk ki a nézet teljes magasságából. Ez lehetővé teszi, hogy a navigációs menü elférjen a képernyőn anélkül, hogy a tartalom vagy a fejléc részét elrejtené. */
+    padding-top: 60px;
+    gap: 10vh;
+
+  }
+
+  .logo-container img {
+    height: 40px;
+
+  }
+  .main_part {
+    flex-direction: column;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+  }
+}
+
+.logo-container {
+  align-items: center;
+}
+
+.logo-container img {
+  height: 120px;
+  width: auto;
+  margin-right: 30px;
+}
+
+.hamburger #closeHam {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+/* Lábléc formázása */
+footer {
+  background-color: #6F370F;
+}
+
+footer .icon {
+  font-size: 24px;
+}
+
+footer {
+  margin-top: 200px; 
+}
+
+
+@media (max-width: 768px) {
+  footer {
+      margin-top: 100px; 
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+      margin-top: 100px; 
+  }
+}
+
+
+/* Írógép animáció */
+
+.typewriter {
+  overflow: hidden; /* A tartalom, ami a .typewriter osztályhoz tartozik, ha túlmutat az elérhető területen, ne jelenjen meg */
+  border-right: 4px solid grey; /* Jobb oldali határvonal a szöveg helyett, amely úgy tűnik, mintha egy kurzor lenne */
+  white-space: nowrap; /* A szöveg ne tördeljen sort, hanem folyamatosan jelenjen meg */
+  margin: 0 auto; /* A .typewriter középre igazítása */
+  letter-spacing: .15em; /* A karakterek közötti térköz beállítása */
+  animation:
+    typing 3.5s steps(40, end), /* A typing animáció hozzáadása: 3.5 másodperc alatt írja be a teljes szöveget 40 lépésben */
+    blink-caret .75s step-end infinite; /* A blink-caret animáció hozzáadása: végtelenül villog a kurzor */
+}
+
+@keyframes typing {
+  from { width: 0 } /* A szöveg szélességének beállítása 0-ról indulva */
+  to { width: 100% } /* A szöveg szélességének beállítása 100%-ra, így a szöveg teljesen megjelenik */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent } /* A kurzor színének beállítása átlátszóra a kezdettől a végéig */
+  50% { border-color: transparent; } /* A kurzor színének beállítása átlátszóra a 50% időben, hogy villogjon */
+}
+
+.quantity {
+ display: none;
+}
